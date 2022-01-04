@@ -1,7 +1,7 @@
 from django.urls import path
-from servise_app import views
+from basic_app import views
 
 
 urlpatterns = [
-    path('', views.users, name='users'),
+   path('', views.new_form, name='new_form'),
 ]
