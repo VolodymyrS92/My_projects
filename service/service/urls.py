@@ -19,7 +19,7 @@ from basic_app import views
 
 
 urlpatterns = [
-    path('', views.form_name_view, name='index'),
-    path('', views.new_form, name='index'),
+    path('', views.data_schema, name='schema_form'),
+    path('basic/', include('basic_app.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -27,3 +27,13 @@ class SchemaColumns(models.Model):
 
     def __str__(self):
         return str(self.schemacolumn)
+
+
+class DataSchemas(models.Model):
+    data_schemas = models.ForeignKey(NewSchema, on_delete=models.CASCADE, default='x')
+    title = models.CharField(max_length=100)
+    modified = models.CharField(max_length=100, unique=True)
+    actions = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.data_schemas)

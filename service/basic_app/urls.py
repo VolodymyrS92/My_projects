@@ -3,5 +3,6 @@ from basic_app import views
 
 
 urlpatterns = [
-   path('', views.new_form, name='new_form'),
+   path('', views.form_name_view, name='index'),
+
 ]

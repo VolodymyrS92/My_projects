@@ -3,10 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>TEST PROJECT SCHEMAS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+          crossorigin="anonymous">
+<style>
+    
+input[type=submit]{
+  width: 8%;
+  color: white;
+  padding: 10px 10px;
+  margin: 0px 0px 0px 800px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;}
+
+
+
+
+
+</style>
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-static-top">
+        <div class="'container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="">FakeCSV</a></li>
+                <li><a class="navbar-link" href="">Schemas</a></li>
+                
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" style="margin-left:700px;"> Hello, username</a></li>
+                <li><a class="navbar-link" href=""> Logout</a></li>
+            </ul>
+        </div>
+            </ul>
+        </div>
+    </nav>
 <div class="container">
-    {{schema}}
+    <input type="submit" class="btn btn-primary" value="Submit">
 </div>
+
+<h3> New schema </h3>
+
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+    <table>
+        {{ schema.as_table }}    
+    </table>
+            
+    </form>
+</div>
+
+
+<h3> Schema columns </h3>
+
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ new_schema.as_table }}    
+        </table>
+    </div> 
+    <div class="container">
+        <table>
+           <input type="buttom" class="btn btn-primary" value="Add column">
+        </table>
+    </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
